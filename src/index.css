@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&family=Orbitron:wght@700;900&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: 'Nunito', 'Segoe UI', sans-serif;
+  background: #0b0920;
+  color: #fff;
+  overscroll-behavior: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root { min-height: 100dvh; }
+
+input  { outline: none; -webkit-appearance: none; appearance: none; }
+input::placeholder { color: rgba(255,255,255,0.28); }
+select { outline: none; }
+button { -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.15); border-radius: 2px; }
+
+/* ── Animations ── */
+@keyframes twinkle    { from{opacity:.15} to{opacity:.85} }
+@keyframes fall       { 0%{transform:translateY(0) rotate(0deg);opacity:1} 100%{transform:translateY(105vh) rotate(540deg);opacity:0} }
+@keyframes pulse      { 0%,100%{transform:scale(1)} 50%{transform:scale(1.05)} }
+@keyframes winner-pop { 0%{transform:scale(.5) translateY(20px);opacity:0} 70%{transform:scale(1.08) translateY(-4px);opacity:1} 100%{transform:scale(1) translateY(0);opacity:1} }
+@keyframes shimmer    { 0%{background-position:200% center} 100%{background-position:-200% center} }
+@keyframes shake      { 0%,100%{transform:translateX(0)} 20%,60%{transform:translateX(-5px)} 40%,80%{transform:translateX(5px)} }
+@keyframes slideUp    { from{transform:translateY(100%);opacity:0} to{transform:translateY(0);opacity:1} }
